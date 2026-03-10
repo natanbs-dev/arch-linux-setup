@@ -16,6 +16,9 @@ SUPER+C
 ## ENCERRAR A SESSÃO
 SUPER+M
 
+## LANÇADOR
+bind = $mainMod, R, exec, rofi -show drun
+
 ---
 # ATALHOS DE APPS
 
