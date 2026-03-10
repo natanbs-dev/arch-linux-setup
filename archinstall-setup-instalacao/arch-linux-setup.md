@@ -36,7 +36,13 @@ cfdisk /dev/nvme0n1
  	mkdir /mnt/boot
  	mount /dev/nvme0n1p5 /mnt/boot/
 ```
- > **Consulte:**
+> **Consulte:**
 ```
  	lsblk
 ```
+ > **/mnt no archinstal:**
+ > no particionamento, escolha a opção de pre-mounted e, na opção de 
+ diretório, seleciona a opção de montagem:
+ ```
+ /mnt
+ ```
