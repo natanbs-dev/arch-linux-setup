@@ -27,12 +27,12 @@ cfdisk /dev/nvme0n1
 > confirmadas, formate as duas partições seguindo esse padrão, lembrando, primeiramente a partição de boot e em segundo a raiz, que serão colocadas com os números 5 e 6 para exemplo
 > 	**Formatando partições: FAT32 e EXT4:**
 ```
-    mkfs.fat -F32 /dev/nvme0n1p5
+  mkfs.fat -F32 /dev/nvme0n1p5
  	mkfs.ext4 /dev/nvme0n1p6
 ```
 > **Montagem**    
 ```
- 	mount /dev/nvme0n1p6 /mnt
+ 	mount /dev/nvme0n1p6 /mnt (que será a maior partição, a partição raiz)
  	mkdir /mnt/boot
  	mount /dev/nvme0n1p5 /mnt/boot/
 ```
