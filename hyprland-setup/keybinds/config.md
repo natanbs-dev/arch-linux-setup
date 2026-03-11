@@ -18,7 +18,7 @@ SUPER+M
 
 ## LANÇADOR
 bind = $mainMod, R, exec, rofi -show drun
-
+bind = $mainMod, R, exec, fuzzel  #este que acabou por aplicar o tema black
 ---
 # ATALHOS DE APPS
 
