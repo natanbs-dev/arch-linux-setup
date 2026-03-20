@@ -1,4 +1,4 @@
-c## arch linux = install
+## arch linux = install
 
 
 ## disk
@@ -11,24 +11,23 @@ cfdisk /dev/nvme0n1
 > 	3. criado a partição de boot, utilize o resto do espaço para a partição raiz
 > 	4. entre na opçaõ [WRITE] e confirme as alterações
 
-### resumo do cfdisk
-
-> particione o disk mencionado antes da instalação com o archinstall, separando, 1G para o boot, sendo colocado o tipo como EFI system
-
-> com o espaço disponível, use como a partição raiz
-
 ### formatando as partições e montando
 
 > tendo feito o passo anterior, confirme com o comando lsblk para verificar se foram criadas as partições corretamente:
 ```
     lsblk 
 ```
+ou seja:
+```
+nvme0n1p5 -> /boot/
+nvme0n1p6 -> / (raiz)
+```
 
 > confirmadas, formate as duas partições seguindo esse padrão, lembrando, primeiramente a partição de boot e em segundo a raiz, que serão colocadas com os números 5 e 6 para exemplo
 > 	**Formatando partições: FAT32 e EXT4:**
 ```
-  mkfs.fat -F32 /dev/nvme0n1p5
- 	mkfs.ext4 /dev/nvme0n1p6
+    mkfs.fat -F32 /dev/nvme0n1p5
+ 	mkfs.ext4 /dev/nvme0n1p6   #lembrando que, caso queira outro tipo além do ext4, use mkfs.brtfs ao invés de mkf2.ext4
 ```
 > **Montagem**    
 ```
