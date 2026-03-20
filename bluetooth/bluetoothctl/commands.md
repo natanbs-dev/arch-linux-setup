@@ -4,7 +4,7 @@
 
 sudo pacman -Syy bluez bluez-utils 
 
-sudo systemc  enable --now bluetooth.service
+sudo systemctl  enable --now bluetooth.service
 
 ## conexao
 
