@@ -27,7 +27,7 @@ nvme0n1p6 -> / (raiz)
 > 	**Formatando partições: FAT32 e EXT4:**
 ```
     mkfs.fat -F32 /dev/nvme0n1p5
- 	mkfs.ext4 /dev/nvme0n1p6   # mkfs.brtfs - brtfs
+ 	mkfs.ext4 /dev/nvme0n1p6   # mkfs.btrfs - btrfs
 ```
 > **Montagem**    
 ```
