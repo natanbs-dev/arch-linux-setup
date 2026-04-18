@@ -7,6 +7,7 @@ loadkeys br-abnt2
 iwctl
 device list
 station wlan5 get-networks
+station wlan5 connect-hidden NETWORK.SSID
 station wlan5 connect NETWORK.SSID
 ```
 ## verifique se conectou
