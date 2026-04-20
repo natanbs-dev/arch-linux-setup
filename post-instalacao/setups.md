@@ -12,12 +12,7 @@
 
 
 ## PACOTES NATIVOS DO ARCHLINUX
-sudo pacman -Syy noto-fonts-cjk nerd-fonts lazygit neovim intel-media-driver sysbench
+sudo pacman -Syy noto-fonts-cjk ttf-jetbrains-mono-nerd  lazygit neovim intel-media-driver sysbench lazygit neovim
 
-## NVIM
+## lazyvim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
-
-## LAZYGIT
-
-## fontes
-noto-fonts-cjk nerd-fonts
