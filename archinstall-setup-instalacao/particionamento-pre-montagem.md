@@ -3,7 +3,7 @@
 
 ## disk
 ```bash
-cfdisk /dev/nvme0n1
+cfdisk /dev/[disk]
 ```
 > **formatação**
 > 	1. crie primeiramente 1G para o /boot
@@ -29,12 +29,17 @@ nvme0n1p6 -> / (raiz)
     mkfs.fat -F32 /dev/nvme0n1p5
  	mkfs.ext4 /dev/nvme0n1p6   # mkfs.btrfs - btrfs
 ```
-> **Montagem**    
+> **Montagem [com systemd-boot]**    
 ```
  	mount /dev/nvme0n1p6 /mnt (que será a maior partição, a partição raiz)
  	mkdir /mnt/boot
  	mount /dev/nvme0n1p5 /mnt/boot/
 ```
+> **Montagem [com grub]**
+	mount /dev/nvme0n1p6 /mnt
+	mkdir /mnt/boot/efi
+	mount /dev/nvme0n1p5 /mnt/boot/efi
+
 > **Consulte:**
 ```
  	lsblk
