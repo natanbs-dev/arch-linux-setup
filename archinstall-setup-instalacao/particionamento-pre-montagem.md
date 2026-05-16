@@ -36,10 +36,11 @@ nvme0n1p6 -> / (raiz)
  	mount /dev/nvme0n1p5 /mnt/boot/
 ```
 > **Montagem [com grub]**
+```
 	mount /dev/nvme0n1p6 /mnt
 	mkdir /mnt/boot/efi
 	mount /dev/nvme0n1p5 /mnt/boot/efi
-
+```
 > **Consulte:**
 ```
  	lsblk
